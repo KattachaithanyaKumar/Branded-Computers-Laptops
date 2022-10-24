@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login page</title>
+        <style>
+            * {
+                padding: 0px;
+                margin: 0px;
+            }
+
+            body {
+                background-image: url(img/backgrounds/bg-login.jpg);
+                color: white;
+            }
+
+            .login-block {
+                background-color: black;
+                width: 50%;
+                height: 40vh;
+                margin-top: 14%;
+                text-align: center;
+                border-radius: 20px;
+                padding: 2%;
+                font-size: 20px;
+                box-shadow: 0 0 50px grey;
+            }
+
+            .login-block h2 {
+                font-size: 40px;
+            }
+            
+            input {
+                height: 4vh;
+                width: 30vw;
+            }
+            @media only screen and (max-width: 1024px)  {
+                .login-block {
+                    height: 50vh;
+                }
+            }
+            @media only screen and (max-width: 768px)  {
+                .login-block {
+                    width: 90%;
+                    margin-top: 20%;
+                }
+                input {
+                    width: 50vw;
+                }
+            }
+            @media only screen and (max-width: 425px)  {
+                .login-block {
+                    margin-top: 40%;
+                }
+            }
+        </style>
+
+        <script>
+            function login()  {
+                var pw = document.getElementById("pswd").value;  
+                var user = document.getElementById("name").value;
+                //check empty password field  
+                if(pw == "") {  
+                    document.getElementById("message").innerHTML = "*Please enter password*";  
+                    return false;  
+                }
+                if(user == "") {  
+                    document.getElementById("message").innerHTML = "*Please enter username*";  
+                    return false;  
+                }
+                if (user != "" && pw != "")  {
+                    alert("login sucess!");
+                }
+                
+            }
+        </script>
+    </head>
+
+    <body>
+        <center>
+            <div class="login-block">
+                <h2><u>LOGIN:</u></h2> <br>
+                <form onsubmit="return login()">
+                    USERNAME: <br>
+                    <input type = "text" id = "name"> <br> <br>
+                    PASSWORD: <br>
+                    <input type = "password" id = "pswd"> <br> 
+                    <span id = "message" style="color: red;"></span> <br>
+                    <input type="submit" value = "Login" style = "width: 80px;"> <br>
+                </form> <br>
+                Dont have an account? <br>
+                <a href="signup.html" style = "color: red;">Sign Up</a>
+            </div>
+        </center>
+    </body>
+</html>

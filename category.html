@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Best Laptops</title>
+        <style>
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+            body {
+                background-image: url(img/backgrounds/bg-video.png);
+            }
+            img {
+                width: 100%;
+                margin-top: 5%;
+                box-shadow: 0 0 30px grey;
+            }
+            h1 {
+                text-align: center;
+                padding-top: 50px;
+                color: #5dfff4;
+            }
+            h3 {
+                text-align: center;
+            }
+            .nav ul {
+                list-style-type: none;
+            }
+            .nav ul li {
+                display: inline;
+                margin: 25px;
+                float: right;
+            }
+            .nav a {
+                text-decoration: none;
+                font-size: 21px;
+                color:white;
+            }
+            .nav a:hover {
+                color: #C3073F;
+            }
+            .nav {
+                width: 100%;
+                height: 4vw;
+                background-color: rgb(38, 38, 38);
+                position: fixed;
+                top: 0;
+                z-index: 10;
+            }
+            .box {
+                width: 40vw;
+                height: 460px;
+                background-color: #66FCF1;
+                margin: 50px;
+                margin-left: 5%;
+                border: 5px dashed #1F2833;
+                transition: .3s ease;
+                float: left;
+            }
+            .box:hover {
+                transform: scale(1.05);
+                box-shadow: 0 0 50px #66FCF1;
+            }
+            iframe {
+                width: 35vw;
+                height: 400px;
+                padding: 10px;
+            }
+            @media only screen and (max-width: 1500px)  {
+                .box {
+                    width: 80%;
+                    height: 520px;
+                    margin: 90px;
+                    margin-left: 10%;
+                    margin-bottom: 50px;
+                }
+                iframe {
+                    width: 70vw;
+                    height: 450px;
+                }
+            }
+            @media only screen and (max-width: 1024px)  {
+                .nav {
+                    height: 10vh;
+                }
+            }
+            @media only screen and (max-width: 768px)  {
+                .nav {
+                    height: 8vh;
+                }
+                img {
+                    margin-top:15%;
+                }
+            }
+            @media only screen and (max-width: 425px)  {
+                
+                .box {
+                    margin: 2%;
+                    width: 90vw;
+                    height: 300px;
+                }
+                iframe {
+                    width: 80vw;
+                    height: 250px;
+                }
+                .nav {
+                    height: 20vh;
+                }
+                .nav a {
+                    font-size: 16px;
+                }
+                .nav ul {
+                    float: right;
+                }
+                .nav h1 {
+                    display: none;
+                }
+                img {
+                    margin-top: 40%;
+                }
+                .box {
+                    margin: 2%;
+                    font-size: 12px;
+                    height: 400%;
+                }
+            }
+            @media only screen and (max-width: 320px)  {
+                img {
+                    margin-top: 50%;
+                }
+            }
+        </style>
+        <script>
+            function changeImage()  {
+                var image = document.getElementById("myImage");
+                if (image.src.match("bulbon"))  {
+                    image.src = "img/banners/laptopsBanner.jpg";
+                }else{
+                    image.src = "img/banners/banner1.jpg";
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <div class="nav">
+            <h1 style = "color: #C3073F; float: left; padding: 20px; padding-left: 50px;">BLC</h1>
+            <ul>
+                <li><a href="login.html">LOGIN</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="category.html">VIDEOS</a></li>
+                <li><a href="index.html">HOME</a></li>
+            </ul>
+        </div>
+        <img src="img/banners/laptopsBanner.jpg" id = "myImage" onclick="changeImage()">
+        <div class="page">
+            <h1>Go through the latest laptops to get <br> the one which best suits you.</h1> <br>
+            <center>
+                <div class="box">
+                    <iframe width="1863" height="770" src="https://www.youtube.com/embed/6fPj6mj-M_k" title="XPS 13 Plus - Cleaner And Faster Than A MacBook!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <br>
+                    <h3>CLICK TO WATCH</h3>
+                </div>
+                <div class="box">
+                    <iframe width="1863" height="770" src="https://www.youtube.com/embed/mrXuvoVMtSE" title="The Best Gaming Laptop. Period. - Asus Zephyrus G15 Review" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <br>
+                    <h3>CLICK TO WATCH</h3>
+                </div>
+                <div class="box">
+                    <iframe width="1863" height="770" src="https://www.youtube.com/embed/MjGMeMrH73I" title="M2 MacBook Air Impressions: Midnight Madness!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <br>
+                    <h3>CLICK TO WATCH</h3>
+                </div>
+                <div class="box">
+                    <iframe width="1863" height="770" src="https://www.youtube.com/embed/n8c75QMPST8" title="This New Laptop Has a Hidden Secret..." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <h3>CLICK TO WATCH</h3>
+                </div>
+            </center>
+        </div>
+    </body>
+</html>

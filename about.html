@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                background-image: url(img/backgrounds/bg-about.jpg);
+            }
+            .nav ul {
+                list-style-type: none;
+            }
+            .nav ul li {
+                display: inline;
+                margin: 25px;
+                float: right;
+            }
+            .nav a {
+                text-decoration: none;
+                font-size: 21px;
+                color:white;
+            }
+            .nav a:hover {
+                color: #C3073F;
+            }
+            .nav {
+                width: 100%;
+                height: 4vw;
+                background-color: rgb(38, 38, 38);
+                position: fixed;
+                top: 0;
+                z-index: 10;
+            }
+            @media only screen and (max-width: 1024px)  {
+                .nav {
+                    height: 6vw;
+                }
+            }
+            .banner {
+                position: absolute;
+                left: 50%;
+                top: 0;
+                transform: translate(-50%, 0%);
+                box-shadow: 0 0 80px grey;
+            }
+            .about {
+                position: absolute;
+                width: 1200px;
+                height: 1200px;
+                background-color: rgb(38,38,38);
+                left: 50%;
+                top: 480px;
+                transform: translate(-50%);
+                text-align: center;
+                box-shadow: 0 0 80px grey;
+            }
+
+            .contact {
+                width: 1000px;
+                height: 800px;
+                border: 5px dashed white;
+                position: absolute;
+                left: 50%;
+                top: 52%;
+                transform: translate(-50%, -50%);
+            }
+            .contact h2,p {
+                text-align: center;
+                color: #66FCF1;
+            }
+            .contact h2 {
+                color: white;
+            }
+            .contact form {
+                color: #66FCF1;
+            }
+            .about h1 {
+                color: white;
+            }
+            .inputBox {
+                width: 300px;
+                height: 30px;
+            }
+            .submit {
+                width: 200px;
+            }
+            .contact table {
+                color: #66FCF1;
+                border-spacing: 15px;
+            }
+            @media only screen and (max-width: 768px) {
+                
+                .nav {
+                    height: 12vh;
+                }
+                .banner {
+                    margin-left: 15%;
+                }
+                .about {
+                    margin-left: 15%;
+                }
+                .contact {
+                    width: 70%;
+                }
+            }
+            @media only screen and (max-width: 425px)  {
+                img {
+                    display: none;
+                }
+                
+                .about {
+                    top: 10%;
+                    width: 90%;
+                    margin-left: 0;
+                }
+                .contact {
+                    width: 85%;
+                }
+                .inputBox {
+                    width: 60%;
+                }
+                .msgbox {
+                    width: 60%;
+                }
+                .nav {
+                    height: 20vh;
+                }
+                .nav a {
+                    font-size: 16px;
+                }
+                .nav ul {
+                    float: right;
+                }
+                .nav h1 {
+                    display: none;
+                }
+                .about {
+                    margin-top: 35%;
+                }
+                .box {
+                    margin: 2%;
+                    font-size: 12px;
+                    height: 400%;
+                    background-color: #C3073F;
+                }
+            }
+            @media only screen and (max-width: 320px)  {
+                .about {
+                    width: 100%;
+                    margin: 0;
+                }    
+                .contact {
+                    font-size: 12px;
+                }       
+                .inputBox {
+                    width: 50%;
+                }
+                .msgbox {
+                    width: 50%;
+                }
+                .about {
+                    margin-top: 45%;
+                }
+            }
+        </style>
+        <script>
+            function displayMsg()  {
+                window.alert("Thank you! your message has been sent!");
+            }
+        </script>
+    </head>
+
+    <body>
+        <div class="nav">
+            <h1 style = "color: #C3073F; float: left; padding: 20px; padding-left: 50px;">BLC</h1>
+            <ul>
+                <li><a href="login.html">LOGIN</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="category.html">VIDEOS</a></li>
+                <li><a href="index.html">HOME</a></li>
+            </ul>
+        </div>
+        <div class="banner">
+            <img src="img/banners/aboutBanner.jpg">
+        </div>
+        <div class="about">
+            <br>
+            <center>
+                <h1>ABOUT US</h1> <br>
+                <p>
+                    Branded Laptop store has been established in 1999. we have a lot of exeperience in wide <br> range of laptops and personal computers.
+                    We sell the best in quality laptops and PCs which will fit all you personal needs. <br> The laptops range from personal, student and professional.
+                </p>
+            </center>
+            <div class="contact">
+                <br>
+                <h2><ins>Contact us</ins></h2> <br>
+                <center>
+                    <table>
+                        <tr>
+                            <th>Email: </th>
+                            <td>brandedLaptops@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <th>Phone: </th>
+                            <td>8919459267  </td>
+                        </tr>
+                        <tr>
+                            <th>Address: </th>
+                            <td>1716, 7th Ln, Mahalaxminagar, Rajarampuri, <br> Kolhapur, 416001</td>
+                        </tr>
+                    </table>
+                </center>
+                <br>
+                <h2><ins>Get in touch</ins></h2> <br>
+                <p>If you have any questions please contact us</p> <br> <br>
+                <form>
+                    Name: &nbsp;&nbsp;<input type="text" name = "fullName" class = "inputBox" id = "FullName"> <br> <br>
+                    Email: &nbsp;&nbsp;<input type="email" name = "email" class = "inputBox"> <br> <br>
+                    Subject: <input type="text" name = "sub" class = "inputBox"> <br> <br>
+                    Message: <textarea name="message" cols="40" rows="10" class = "msgbox"></textarea> <br> <br>
+                    <input type="submit" name = "submit" value="Send message" class = "submit" onclick="displayMsg()">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
